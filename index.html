@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRMS Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">H</div>
+
+                <div>
+                    <h2>HRMS</h2>
+                    <span>Human Resources</span>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <div class="nav-section">
+                    <span>MAIN</span>
+
+                    <a href="#" class="nav-item active" data-page="dashboard">
+                        <span>▦</span>
+                        Dashboard
+                    </a>
+
+                    <a href="#" class="nav-item" data-page="employees">
+                        <span>♙</span>
+                        Employees
+                    </a>
+
+                    <a href="#" class="nav-item" data-page="attendance">
+                        <span>◷</span>
+                        Attendance
+                    </a>
+
+                    <a href="#" class="nav-item" data-page="leave">
+                        <span>◫</span>
+                        Leave
+                    </a>
+                </div>
+
+                <div class="nav-section">
+
+                    <span>PEOPLE</span>
+
+                    <a href="#" class="nav-item" data-page="recruitment">
+                        <span>♧</span>
+                        Recruitment
+                    </a>
+
+                    <a href="#" class="nav-item" data-page="onboarding">
+                        <span>✓</span>
+                        Onboarding
+                    </a>
+
+                    <a href="#" class="nav-item" data-page="performance">
+                        <span>↗</span>
+                        Performance
+                    </a>
+
+                </div>
+
+                <div class="nav-section">
+
+                    <span>FINANCE</span>
+
+                    <a href="#" class="nav-item" data-page="payroll">
+                        <span>₹</span>
+                        Payroll
+                    </a>
+
+                    <a href="#" class="nav-item" data-page="expenses">
+                        <span>◈</span>
+                        Expenses
+                    </a>
+
+                </div>
+
+                <div class="nav-section">
+
+                    <span>ADMINISTRATION</span>
+
+                    <a href="#" class="nav-item" data-page="reports">
+                        <span>▤</span>
+                        Reports
+                    </a>
+
+                    <a href="#" class="nav-item" data-page="settings">
+                        <span>⚙</span>
+                        Settings
+                    </a>
+
+                </div>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-mini">
+
+                    <div class="avatar">
+                        AK
+                    </div>
+
+                    <div>
+                        <strong>Admin User</strong>
+                        <small>Administrator</small>
+                    </div>
+
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- Main -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <h1 id="page-title">Dashboard</h1>
+                    <p id="page-subtitle">
+                        Welcome back. Here's what's happening today.
+                    </p>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button class="icon-button">
+                        🔔
+                    </button>
+
+                    <div class="profile">
+                        <div class="avatar">
+                            AK
+                        </div>
+
+                        <div>
+                            <strong>Arun Kumar</strong>
+                            <small>Administrator</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Content -->
+            <section class="content" id="app-content">
+
+                <!-- Dashboard -->
+
+                <div id="dashboard-page">
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon employees-icon">
+                                👥
+                            </div>
+
+                            <div>
+                                <span>Total Employees</span>
+                                <strong id="employee-count">0</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon attendance-icon">
+                                ✓
+                            </div>
+
+                            <div>
+                                <span>Present Today</span>
+                                <strong>0</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon leave-icon">
+                                ◫
+                            </div>
+
+                            <div>
+                                <span>On Leave</span>
+                                <strong>0</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <div class="stat-icon hiring-icon">
+                                ♧
+                            </div>
+
+                            <div>
+                                <span>Open Positions</span>
+                                <strong>0</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-grid">
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <h2>Recent Employees</h2>
+                                    <p>Latest employees added to the organization.</p>
+                                </div>
+
+                                <button
+                                    class="secondary-button"
+                                    onclick="navigateTo('employees')"
+                                >
+                                    View All
+                                </button>
+
+                            </div>
+
+                            <div id="recent-employees">
+                                <div class="empty-state">
+                                    No employees added yet.
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <h2>Quick Actions</h2>
+                                    <p>Frequently used HR actions.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="quick-actions">
+
+                                <button onclick="navigateTo('employees')">
+                                    <span>+</span>
+                                    Add Employee
+                                </button>
+
+                                <button onclick="navigateTo('attendance')">
+                                    <span>✓</span>
+                                    Mark Attendance
+                                </button>
+
+                                <button onclick="navigateTo('leave')">
+                                    <span>◫</span>
+                                    Leave Request
+                                </button>
+
+                                <button onclick="navigateTo('recruitment')">
+                                    <span>♧</span>
+                                    Create Job
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
